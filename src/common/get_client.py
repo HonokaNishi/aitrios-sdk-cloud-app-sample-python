@@ -46,3 +46,6 @@ def get_console_client():
 
 
     return client_obj
+
+client_obj = get_console_client()
+print(client_obj)
