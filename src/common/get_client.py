@@ -34,6 +34,7 @@ def get_console_client():
     """
 
     setting_file_path = os.path.join(os.getcwd(), "src", "common", "console_access_settings.yaml")
+    print(setting_file_path)
     read_console_access_settings_obj = ReadConsoleAccessSettings(setting_file_path)
     config_obj = Config(
         read_console_access_settings_obj.console_endpoint,
@@ -42,5 +43,6 @@ def get_console_client():
         read_console_access_settings_obj.client_secret
     )
     client_obj = Client(config_obj)
+
 
     return client_obj
